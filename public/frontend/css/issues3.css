@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@font-face {
+  font-family: headFont;
+  src: url(../font/Kievit\ Bold.ttf);
+}
+
+@media (max-width: 768px) {
+  .issue3-heading-1 {
+    font-family: headFont !important;
+    /* border: 2px solid #fa0101 !important; */
+    font-size: 32px;
+    font-weight: 550;
+    text-align: center;
+  }
+  .hero-card.step-3.p-4.sub-section {
+    /* border: 2px solid #fa0101 !important; */
+    padding: 0 !important;
+    height: 300px !important;
+  }
+
+  .hero-card.step-3.p-4.sub-section .map-item {
+    /* border: 2px solid #090775; */
+    /* padding: 0 !important; */
+    width: 350px;
+    /* display: none !important; */
+    height: 255px;
+    background: #da3631;
+    border-radius: 10px !important;
+  }
+
+  .hero-card.step-3.p-4.sub-section .map-img {
+    border: 1.5px solid #000000;
+    /* position: absolute; */
+    width: 350px;
+    height: 180px;
+    /* z-index: 0; */
+    /* background-color: #fff !important; */
+    /* display: none; */
+  }
+
+  .issue3-text {
+    /* border: 2px solid #1a0303 !important; */
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px !important;
+    line-height: 24px;
+    /* padding-left: 10px; */
+    text-align: justify !important;
+  }
+
+  .hero-card.step-3.sub-section .card-info1 {
+    /* border: 2px solid #cabdbd !important; */
+    margin-top: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .card-left1 .heading-4 {
+    /* border: 2px solid #2c0606 !important; */
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 46px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-card.step-3.sub-section .number-item {
+    /* border: 2px solid #2c0606 !important; */
+    width: 315px !important;
+  }
+
+  .hero-card.step-3.sub-section .item-desc {
+    /* border: 2px solid #2c0606 !important; */
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .hero-card.step-3.sub-section .circle {
+    width: 50px !important;
+    height: 50px !important;
+    /* border: 2px solid #2c0606 !important; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px !important;
+  }
+
+  .hero-card.step-3.sub-section .circle .step_count {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .vertical-line {
+    /* display: none !important; */
+    /* border: 2px solid #2c0606 !important; */
+    left: 22px !important;
+    bottom: 20px;
+    width: 6px;
+    margin: 0;
+  }
+
+  .card-right1 .heading-4.text-center {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 46px;
+
+    /* text-align: justify; */
+    /* border: 2px solid #2c0606 !important; */
+  }
+
+  .card-right1 .form-group {
+    /* border: 2px solid #2c0606 !important; */
+    margin-top: 10px;
+  }
+  .card-right1 .form-group .custom-input {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    /* border: 2px solid #2c0606 !important; */
+  }
+
+  .card-right1 .form-group .text-small {
+    display: flex;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+
+    text-align: justify;
+    margin-top: 15px;
+    /* border: 2px solid #2c0606 !important; */
+  }
+
+  .card-right1 .btn-2.blockbtn.op-color {
+    background: #da3631;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    width: 310px;
+    height: 55px;
+    /* border: 2px solid #2c0606 !important; */
+  }
+
+  .mobile-progressbar2 {
+    /* border: 1px solid #fa0101; */
+    margin-right: 25px;
+    width: 65px;
+    height: 65px;
+  }
+
+  .mobile-progressbar2 span {
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+    /* border: 1px solid #071570; */
+    font-weight: 500;
+    /* color: #da3631; */
+  }
+
+  .heading-4-center.mobile-only {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 46px;
+    text-align: center;
+    /* border: 2px solid #2c0606 !important; */
+  }
+
+  .mobile-progressbar3 {
+    /* border: 1px solid #fa0101; */
+    margin-right: 25px;
+    width: 65px;
+    height: 65px;
+  }
+
+  .mobile-progressbar3 span {
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+    /* border: 1px solid #071570; */
+    font-weight: 500;
+    /* color: #da3631; */
+  }
+
+  .issue3-heading-2 {
+    width: 250px;
+    /* height: 104px; */
+    font-family: headFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+    /* border: 1px solid #071570; */
+    text-align: center;
+
+    color: #100f0f !important;
+  }
+
+  .hero-card.step-4 .map-img {
+    border: 1.5px solid #000000;
+    /* position: absolute; */
+    width: 350px;
+    height: 180px;
+    /* z-index: 0; */
+    /* background-color: #fff !important; */
+    /* display: none; */
+  }
+
+  .issue3-text-2 {
+    /* border: 2px solid #1a0303 !important; */
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px !important;
+    line-height: 24px;
+    /* padding-left: 10px !important; */
+    width: 330px;
+    padding: 15px !important;
+    margin-top: 0px !important;
+    text-align: justify !important;
+  }
+
+  .bike-card-heading {
+    display: flex;
+    width: 335px;
+    /* border: 2px solid #1a0303 !important; */
+  }
+
+  .issue3-down-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .issue3-down-arrow span {
+    cursor: pointer;
+    border: solid rgb(1, 0, 0);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  .yellow-bg-btn {
+    background: #fedd02 !important;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+  }
+}
+
+/* option.custom_address_box.text-black {
+  white-space: wrap;
+} */
+
+select {
+  height: auto;
+}
+
