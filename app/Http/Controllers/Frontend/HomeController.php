@@ -22,12 +22,14 @@ class HomeController extends Controller
         $bang->bang_id = $request->bangId;
         $bang->save();
         $user = new User();
-        $user->name = "";
-        $user->email = $request->email;
+        $user->name = $request->first_name.' '. $request->last_name;
+        $user->email = $request->user_email;
         $user->bang_id = $bang->id;
         $user->postal_code = $request->postal_code;
         $user->password = "";
         $user->address = $request->address;
+
+        //dd($userData);
         $user->save();
         return [
             'status'=> true,

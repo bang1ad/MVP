@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.pages.home.home');
 });
-Route::post('/bang/request/submit', [HomeController::class,'submitBangRequest']);
+Route::post('/bang_request/submit', [HomeController::class,'submitBangRequest']);
 

@@ -1,177 +1,16 @@
 @extends('frontend.layouts.app')
 @section('content')
-
 <section>
-  <input type="hidden" value="" class="bang_type" />
-  <input type="hidden" value="" class="postal_code" />
-  <input type="hidden" value="" class="latitude" />
-  <input type="hidden" value="" class="longitude" />
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-      <header class="header pt-14 bg-primary">
-        <nav class="navbar navbar-expand-lg p-0">
-          <div class="container align-items-start">
-            <a class="navbar-brand p-0" href="#">
-              <img src="{{asset('frontend/images/logo-header-1.png')}}" height="48" width="auto" alt="" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 16H28" stroke="black" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M4 8H28" stroke="black" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M4 24H28" stroke="black" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>            
-            </button>
-            <div class="collapse navbar-collapse pt-3" id="navbarTogglerDemo03">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a class="p-0 nav-link text-white fs-18 lh-21 fw-medium" aria-current="page" href="#">About Sp_ACES?</a>
-                </li>
-                <li class="nav-item">
-                  <a class="p-0 nav-link text-white fs-18 lh-21 fw-medium" href="#">Get your Sp_ACE</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <section>
-        <div class="MdlSec1 w-100 d-flex justify-content-center align-items-center">
-          <h5>Just launched in London and Birmingham. More locations coming soon! </h5>
-        </div>
-        <div class="MainArea w-100">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 p-0">
-                <h2>BANG!S HAVE ARRIVED</h2>
-                <p>Need a plumber? Or maybe<br> your bike needs a service. Well, quite simply the first price you should check is your home’s 2023 BANG! price</p>
-              </div>
-              <div class="col-lg-6 p-0">
-                <img src="{{asset('frontend/images/img7.png')}}" class="w-100 bnrimg" alt="" />
-              </div>
-              <div class="col-lg-12 text-center py-5 my-5 customtop">
-                <h2>WHAT’S A BANG!</h2>
-                <p>Good question. A BANG! is an exclusive price for your home. You<br> get one BANG! in each category every year and it can be used by<br> your or anyone you live with.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="MainArea2 text-center">
-          <div class="container">
-            <h2>The 2023 BANGS</h2>
-            <p>BANGS! are available in some in some parts of<br> London and Manchester. More locations and<br> BANG! categories coming soon</p>
-          </div>
-        </div>
-        <div class="stepcol">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="d-block d-md-none text-center">
-                  <h3>YOUR HOME’S 2023</h3>
-                  <h4>TRADESPERSON BANG!</h4>
-                </div>
-                <img src="{{asset('frontend/images/img7.png')}}" class="w-100 bnrimg" alt="" />
-              </div>
-              <div class="col-lg-6 ps-4 ps-md-5">
-                <div class="d-none d-md-block">
-                  <h3>YOUR HOME’S 2023</h3>
-                  <h4>TRADESPERSON BANG!</h4>
-                </div>
-                <h5>Need a tradesperson ?</h5>
-                <p>Use you home’s annual Bike Service<br> BANG! for 2023 and SAVE!</p>
-                <ul class="d-none d-md-block">
-                  <li>Your home gets 1 Tradesperson BANG! a year</li>
-                  <li>Jobs completed by local experts</li>
-                  <li>SAVE MONEY!</li>
-                  <li>Transparent prices</li>
-                </ul>
-                <div class="nav MultiTab justify-content-start" id="nav-tab" role="tablist">
-                  <button class="btnLink border-0 get_home_bang" data-type="tradesperson" id="na-home-tab" data-bs-toggle="tab" data-bs-target="#na-home" type="button" role="tab" aria-controls="na-home" aria-selected="false">GET YOUR HOME’S BANG!</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="stepcol stepcol2">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 ps-5">
-                <div class="d-none d-md-block">
-                  <h3>YOUR HOME’S 2023</h3>
-                  <h4>Bike Service BANG! </h4>
-                </div>
-                <h5>Need a bike service ?</h5>
-                <p>Use you home’s annual Bike Service <br>BANG! for 2023 and SAVE!</p>
-                <ul class="d-none d-md-block">
-                  <li>Your home gets 1 Tradesperson BANG! a year</li>
-                  <li>Jobs completed by local experts</li>
-                  <li>SAVE MONEY!</li>
-                  <li>Transparent prices</li>
-                </ul>
-                <div class="nav MultiTab justify-content-start" id="nav-tab" role="tablist">
-                  <button class="btnLink border-0 get_home_bang" data-type="bikeservice" id="na-home-tab" data-bs-toggle="tab" data-bs-target="#na-home" type="button" role="tab" aria-controls="na-home" aria-selected="false">GET YOUR HOME’S BANG!</button>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="d-block d-md-none text-center">
-                  <h3>YOUR HOME’S 2023</h3>
-                  <h4>Bike Service<br class="d-block"> BANG! </h4>
-                </div>
-                <img src="{{asset('frontend/images/img8.png')}}" class="w-100 bnrimg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="worksec">
-          <div class="container">
-            <h2>How it works ?</h2>
-            <p>It’s expensive out there, right? Fear not, your home has 1 BANG a year in each<br> category and guarantees you an exclusive price. Here’s how it works.</p>
-            <div class="row pt-5 mt-5">
-              <div class="col-lg-4">
-                <div class="workinner">
-                  <div class="d-flex align-items-center mb-4">
-                    <img src="{{asset('frontend/images/img9.png')}}" alt="" />
-                    <h3  class="m-0">Unlock</h3>
-                  </div>
-                  <p>Select the BANG! type, enter your postcode and find your home</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="workinner">
-                  <div class="d-flex align-items-center mb-4">
-                    <img src="{{asset('frontend/images/img9.png')}}" alt="" />
-                    <h3  class="m-0">Email</h3>
-                  </div>
-                  <p>Enter your email and you’ll receive your unique BANG! code shortly after</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="workinner">
-                  <div class="d-flex align-items-center mb-4">
-                    <img src="{{asset('frontend/images/img9.png')}} " alt="" />
-                    <h3  class="m-0">Book</h3>
-                  </div>
-                  <p>Follow the instructions to book a quote from your home’s team of experts</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="tab-pane fade show" id="na-home" role="tabpanel" aria-labelledby="na-home-tab">
       <div class="TopSec">
         <div class="container">
-          <div class="backlink w-100 d-flex justify-content-between align-items-center px-3 px-md-0">
-            <a href="#" class="mb-md-4 back_home_page">
+          <div class="backlink w-100 d-flex">
+            <a href="#" class="mb-4">
               <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.25 28.5L3.75 16L16.25 3.5" stroke="white" stroke-width="6.66667" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>            
             </a>
-            <h5 class="d-block d-md-none">Find your address</h5>
-            <div class="d-block d-md-none">
-              <img src="{{asset('frontend/images/img4.png')}}" alt="" />
-            </div>
           </div>
           <ul class="MultiTab justify-content-center mx-auto d-none d-md-flex">
             <li class="active">
@@ -208,73 +47,18 @@
       </div>
       <div class="centerSec">
         <div class="BtmSec text-center">
-          <img src="{{asset('frontend/images/logo-header-1.png')}}" class="logo-sec" height="83" width="auto" alt="" />
-          <h4 class="text-white mb-0 px-4">You’re about to BANG!</h4>
+          <img src="{{asset('frontend/images/logo-header-1.png')}} " height="83" width="auto" alt="" />
+          <h4 class="text-white mb-0">You’re about to BANG!</h4>
         </div>
       </div>
       <div class="LastSec bg-primary">
         <div class="container">
           <div class="row mx-0">
             <div class="col-lg-5">
-              <img class="bang_type_image" src="{{asset('frontend/images/img1.png')}}" alt="" width="100%" />
+              <img src="{{asset('frontend/images/img1.png')}}" alt="" width="100%" />
               <div class="w-100 px-4">
                 <h5 class="m-0 text-white">So you need a plumber?<Br> No problem!</h5>
                 <h6 class="text-white pe-2">The first price you should check is your home’s BANG! Price. Start by finding your home.</h6>
-              </div>
-            </div>
-            <div class="col-lg-12 d-block d-md-none">
-              <div class="Faqs Faqs1 text-center">
-                  <h2 class="text-white">FAQS</h2>
-                  <div class="accordion text-start mx-auto" id="accordionExample">
-                    <div class="accordion-item bg-transparent">
-                      <h3 class="accordion-header text-white" id="headingOne">
-                        <button class="accordion-button text-uppercase text-white bg-transparent p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          What’s a Tradesperson BANG! ?
-                        </button>
-                      </h3>
-                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body text-white p-0">
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item bg-transparent">
-                      <h3 class="accordion-header text-white" id="headingTwo">
-                        <button class="accordion-button text-uppercase text-white bg-transparent p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                          How many BANG!S does my home have?
-                        </button>
-                      </h3>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body text-white p-0">
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item bg-transparent">
-                      <h3 class="accordion-header text-white" id="headingThree">
-                        <button class="accordion-button text-uppercase text-white bg-transparent p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                          Who does the work?
-                        </button>
-                      </h3>
-                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body text-white p-0">
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item bg-transparent">
-                      <h3 class="accordion-header text-white" id="headingFour">
-                        <button class="accordion-button text-uppercase text-white bg-transparent p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                          Can I get another BANG! ?
-                        </button>
-                      </h3>
-                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                        <div class="accordion-body text-white p-0">
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
               </div>
             </div>
             <div class="col-lg-7">
@@ -284,19 +68,26 @@
               </div>
               <form>
                 <div>
-                  <input type="text" name="search_address" class="form-select1 form-select search_address_input" placeholder="Find address"/>
+                 
+                  <select class="form-select" aria-label=".form-select-lg example">
+
+                    <option selected>Find address</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
                 <div class="textareaSec">
                   <div class="d-flex">
-                    <img  src="{{asset('frontend/images/img2.png')}}" alt="" width="60" height="60" />
+                    <img src="{{asset('frontend/images/img2.png')}} " alt="" width="60" height="60" />
                     <div class="ms-6">
                       <h3>Location</h3>
-                      <h6 class="search_address_text">You have told us you live at W2 4EB 29 Pembridge Gardens London</h6>
+                      <h6>You have told us you live at W2 4EB 29 Pembridge Gardens London</h6>
                     </div>
                   </div>
                 </div>
                 <div class="nav MultiTab justify-content-center mx-auto" id="nav-tab" role="tablist">
-                  <button class="form-btn border-0 w-100 mb-4 address_step_tab_button" id="nav-profile-tab" data-bs-toggle="tab" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Next Step</button>
+                  <button class="form-btn border-0 w-100 mb-4 next_show_map_step"  id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Next Step</button>
                 </div>
                 <h6 class="text-white">In the next step we’ll ask you for your email so we can send you your home’s BANG!</h6>
                 </form>
@@ -309,18 +100,14 @@
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       <div class="TopSec">
         <div class="container">
-          <div class="backlink w-100 d-flex justify-content-between align-items-center px-3 px-md-0">
-            <a href="#" class="mb-md-4">
+          <div class="backlink w-100 d-flex">
+            <a href="#" class="mb-4">
               <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.25 28.5L3.75 16L16.25 3.5" stroke="white" stroke-width="6.66667" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>            
             </a>
-            <h5 class="d-block d-md-none">Find your address</h5>
-            <div class="d-block d-md-none">
-              <img src="{{asset('frontend/images/img5.png')}}" alt="" />
-            </div>
           </div>
-          <ul class="MultiTab justify-content-center mx-auto d-none d-md-flex">
+          <ul class="MultiTab d-flex justify-content-center mx-auto">
             <li class="active">
               <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.6856 13.8601C17.8711 13.866 19.0103 13.4001 19.852 12.5654C20.6939 11.7304 21.1691 10.5953 21.1729 9.40953C21.1767 8.22401 20.709 7.0856 19.873 6.24521C19.0368 5.40489 17.9007 4.93147 16.7152 4.92969C15.5296 4.92764 14.392 5.39716 13.5529 6.23495C12.7139 7.07244 12.2426 8.20941 12.2426 9.39486C12.2415 10.5754 12.7087 11.7085 13.5414 12.5456C14.3743 13.3826 15.505 13.8552 16.6856 13.8601Z" fill="currentColor"/>
@@ -355,17 +142,16 @@
       </div>
       <div class="centerSec">
         <div class="BtmSec text-center">
-          <img src="{{asset('frontend/images/logo-header-1.png')}}" class="logo-sec" height="83" width="auto" alt="" />
-          <h6 class="text-white px-5"> You’re requesting the TRADESPERSON BANG! for</h6>
+          <img src="{{asset('frontend/images/logo-header-1.png')}} " height="83" width="auto" alt="" />
+          <h6 class="text-white"> You’re requesting the TRADESPERSON BANG! for</h6>
           <h5 class="text-white"> 15, Smith St, London, W12 2AD.</h5>
-          {{-- <img src="{{asset('frontend/images/img3.png')}}" class="mapimg" height="375" width="auto" alt="" /> --}}
-          <div id='address_map_1' class="mx-auto mapimg" style='width: 700px; height: 380px;'></div>
+          <img src="{{asset('frontend/images/img3.png')}} " height="375" width="auto" alt="" />
         </div>
       </div>
       <div class="LastSec2 bg-primary">
         <div class="container">
           <div class="row mx-0">
-            <div class="col-lg-6 px-4 px-md-3">
+            <div class="col-lg-6">
               <h3>WHATS NEXT?</h3>
               <ul class="m-0 p-0">
                 <li class="d-flex justify-content-start align-items-center"><span class="d-flex justify-content-center align-items-center me-3">1</span> Receive your BANGS! by email</li>
@@ -377,22 +163,22 @@
               <h3>LETS BANG!</h3>
               <div class="row text-start">
                 <div class="col-lg-6 mb-6">
-                  <input type="text" placeholder="First Name" class="first_name" />
+                  <input type="text" placeholder="First Name" />
                 </div>
                 <div class="col-lg-6 mb-6">
-                  <input type="text" placeholder="Last Name" class="last_name" />
+                  <input type="text" placeholder="Last Name" />
                 </div>
                 <div class="col-lg-12 mb-6">
-                  <input type="text" placeholder="Enter email" class="user_email" />
+                  <input type="text" placeholder="Enter email" />
                   <span class="mt-3 d-block">For safe keeping we’ll send your BANG! by email</span>
                 </div>
                 <div class="col-lg-12 mb-6">
-                  <input type="number" placeholder="Enter mobile number" class="user_mobile_number" />
+                  <input type="number" placeholder="Enter mobile number" />
                   <span class="mt-3 d-block">We’ll send your BANG! ID by text too</span>
                 </div>
                 <div class="col-lg-12">
                   <div class="nav MultiTab justify-content-center mx-auto" id="nav-tab" role="tablist">
-                    <button class="form-btn border-0 w-100 mb-4 user_profile_step_button" id="nav-contact-tab" data-bs-toggle="tab"   type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Get my BANG</button>
+                    <button class="form-btn border-0 w-100 mb-4" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Get my BANG</button>
                   </div>
                 </div>
               </div>
@@ -404,18 +190,14 @@
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
       <div class="TopSec">
         <div class="container">
-          <div class="backlink w-100 d-flex justify-content-between align-items-center px-3 px-md-0">
-            <a href="#" class="mb-md-4">
+          <div class="backlink w-100 d-flex">
+            <a href="#" class="mb-4">
               <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.25 28.5L3.75 16L16.25 3.5" stroke="white" stroke-width="6.66667" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>            
             </a>
-            <h5 class="d-block d-md-none">Find your address</h5>
-            <div class="d-block d-md-none">
-              <img src="{{asset('frontend/images/img6.png')}}" alt="" />
-            </div>
           </div>
-          <ul class="MultiTab justify-content-center mx-auto d-none d-md-flex">
+          <ul class="MultiTab d-flex justify-content-center mx-auto">
             <li class="active">
               <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.6856 13.8601C17.8711 13.866 19.0103 13.4001 19.852 12.5654C20.6939 11.7304 21.1691 10.5953 21.1729 9.40953C21.1767 8.22401 20.709 7.0856 19.873 6.24521C19.0368 5.40489 17.9007 4.93147 16.7152 4.92969C15.5296 4.92764 14.392 5.39716 13.5529 6.23495C12.7139 7.07244 12.2426 8.20941 12.2426 9.39486C12.2415 10.5754 12.7087 11.7085 13.5414 12.5456C14.3743 13.3826 15.505 13.8552 16.6856 13.8601Z" fill="currentColor"/>
@@ -451,11 +233,10 @@
       <div class="centerSec">
         <div class="BtmSec text-center">
           <img src="{{asset('frontend/images/logo-header-1.png')}}" height="83" width="auto" alt="" />
-          <h4 class="text-white mb-5 px-4">Your BANG! is on it’s way </h4>
-          {{-- <img src="{{asset('frontend/images/img3.png')}}" class="mapimg" height="375" width="auto" alt="" /> --}}
-          <div id='address_map_2' class="mx-auto mapimg" style='width: 700px; height: 380px;'></div>
-          <div class="w-100 pt-0 pt-md-5 mt-3">
-            <button class="form-btn2 text-white border-0 finish_steps_button">FINISH</button>
+          <h4 class="text-white mb-5">Your BANG! is on it’s way </h4>
+          <img src="{{asset('frontend/images/img3.png')}}" height="375" width="auto" alt="" />
+          <div class="w-100 pt-5 mt-3">
+            <button class="form-btn2 text-white border-0">FINISH</button>
           </div>
         </div>
       </div>
@@ -517,13 +298,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
 
 
 @endsection

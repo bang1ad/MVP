@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg p-0">
     <div class="container align-items-start">
       <a class="navbar-brand p-0" href="#">
-        <img src="{{asset('frontend/images/logo-header-1.png')}}" height="48" width="auto" alt="" />
+        <img src="<?php echo e(asset('frontend/images/logo-header-1.png')); ?>" height="48" width="auto" alt="" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -20,4 +20,4 @@
     </div>
   </nav>
   <div class="container"></div>
-</header>
+</header><?php /**PATH E:\xampp\htdocs\MVP\resources\views/frontend/layouts/header.blade.php ENDPATH**/ ?>

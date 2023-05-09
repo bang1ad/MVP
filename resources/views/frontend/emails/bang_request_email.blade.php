@@ -9,8 +9,8 @@
 <body>
     Hi,
 
-    <p>User Name:  - </p>
-    <p>User Email:    {{$userData['email']}} </p>
+    <p>User Name:     {{$userData['first_name']}}   {{$userData['last_name']}}</p>
+    <p>User Email:    {{$userData['user_email']}} </p>
     <p>Bang id:       {{$userData['bangId']}} </p>
     <p>Bang Type:     {{$userData['bang_type']}} </p>
     <p>Address:       {{$userData['address']}} </p>

@@ -1,5 +1,5 @@
-@extends('frontend.layouts.app')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 
 <section>
   <input type="hidden" value="" class="bang_type" />
@@ -12,7 +12,7 @@
         <nav class="navbar navbar-expand-lg p-0">
           <div class="container align-items-start">
             <a class="navbar-brand p-0" href="#">
-              <img src="{{asset('frontend/images/logo-header-1.png')}}" height="48" width="auto" alt="" />
+              <img src="<?php echo e(asset('frontend/images/logo-header-1.png')); ?>" height="48" width="auto" alt="" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@
                 <p>Need a plumber? Or maybe<br> your bike needs a service. Well, quite simply the first price you should check is your home’s 2023 BANG! price</p>
               </div>
               <div class="col-lg-6 p-0">
-                <img src="{{asset('frontend/images/img7.png')}}" class="w-100 bnrimg" alt="" />
+                <img src="<?php echo e(asset('frontend/images/img7.png')); ?>" class="w-100 bnrimg" alt="" />
               </div>
               <div class="col-lg-12 text-center py-5 my-5 customtop">
                 <h2>WHAT’S A BANG!</h2>
@@ -69,7 +69,7 @@
                   <h3>YOUR HOME’S 2023</h3>
                   <h4>TRADESPERSON BANG!</h4>
                 </div>
-                <img src="{{asset('frontend/images/img7.png')}}" class="w-100 bnrimg" alt="" />
+                <img src="<?php echo e(asset('frontend/images/img7.png')); ?>" class="w-100 bnrimg" alt="" />
               </div>
               <div class="col-lg-6 ps-4 ps-md-5">
                 <div class="d-none d-md-block">
@@ -116,7 +116,7 @@
                   <h3>YOUR HOME’S 2023</h3>
                   <h4>Bike Service<br class="d-block"> BANG! </h4>
                 </div>
-                <img src="{{asset('frontend/images/img8.png')}}" class="w-100 bnrimg" alt="" />
+                <img src="<?php echo e(asset('frontend/images/img8.png')); ?>" class="w-100 bnrimg" alt="" />
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@
               <div class="col-lg-4">
                 <div class="workinner">
                   <div class="d-flex align-items-center mb-4">
-                    <img src="{{asset('frontend/images/img9.png')}}" alt="" />
+                    <img src="<?php echo e(asset('frontend/images/img9.png')); ?>" alt="" />
                     <h3  class="m-0">Unlock</h3>
                   </div>
                   <p>Select the BANG! type, enter your postcode and find your home</p>
@@ -138,7 +138,7 @@
               <div class="col-lg-4">
                 <div class="workinner">
                   <div class="d-flex align-items-center mb-4">
-                    <img src="{{asset('frontend/images/img9.png')}}" alt="" />
+                    <img src="<?php echo e(asset('frontend/images/img9.png')); ?>" alt="" />
                     <h3  class="m-0">Email</h3>
                   </div>
                   <p>Enter your email and you’ll receive your unique BANG! code shortly after</p>
@@ -147,7 +147,7 @@
               <div class="col-lg-4">
                 <div class="workinner">
                   <div class="d-flex align-items-center mb-4">
-                    <img src="{{asset('frontend/images/img9.png')}} " alt="" />
+                    <img src="<?php echo e(asset('frontend/images/img9.png')); ?> " alt="" />
                     <h3  class="m-0">Book</h3>
                   </div>
                   <p>Follow the instructions to book a quote from your home’s team of experts</p>
@@ -170,7 +170,7 @@
             </a>
             <h5 class="d-block d-md-none">Find your address</h5>
             <div class="d-block d-md-none">
-              <img src="{{asset('frontend/images/img4.png')}}" alt="" />
+              <img src="<?php echo e(asset('frontend/images/img4.png')); ?>" alt="" />
             </div>
           </div>
           <ul class="MultiTab justify-content-center mx-auto d-none d-md-flex">
@@ -208,7 +208,7 @@
       </div>
       <div class="centerSec">
         <div class="BtmSec text-center">
-          <img src="{{asset('frontend/images/logo-header-1.png')}}" class="logo-sec" height="83" width="auto" alt="" />
+          <img src="<?php echo e(asset('frontend/images/logo-header-1.png')); ?>" class="logo-sec" height="83" width="auto" alt="" />
           <h4 class="text-white mb-0 px-4">You’re about to BANG!</h4>
         </div>
       </div>
@@ -216,7 +216,7 @@
         <div class="container">
           <div class="row mx-0">
             <div class="col-lg-5">
-              <img class="bang_type_image" src="{{asset('frontend/images/img1.png')}}" alt="" width="100%" />
+              <img class="bang_type_image" src="<?php echo e(asset('frontend/images/img1.png')); ?>" alt="" width="100%" />
               <div class="w-100 px-4">
                 <h5 class="m-0 text-white">So you need a plumber?<Br> No problem!</h5>
                 <h6 class="text-white pe-2">The first price you should check is your home’s BANG! Price. Start by finding your home.</h6>
@@ -288,7 +288,7 @@
                 </div>
                 <div class="textareaSec">
                   <div class="d-flex">
-                    <img  src="{{asset('frontend/images/img2.png')}}" alt="" width="60" height="60" />
+                    <img  src="<?php echo e(asset('frontend/images/img2.png')); ?>" alt="" width="60" height="60" />
                     <div class="ms-6">
                       <h3>Location</h3>
                       <h6 class="search_address_text">You have told us you live at W2 4EB 29 Pembridge Gardens London</h6>
@@ -317,7 +317,7 @@
             </a>
             <h5 class="d-block d-md-none">Find your address</h5>
             <div class="d-block d-md-none">
-              <img src="{{asset('frontend/images/img5.png')}}" alt="" />
+              <img src="<?php echo e(asset('frontend/images/img5.png')); ?>" alt="" />
             </div>
           </div>
           <ul class="MultiTab justify-content-center mx-auto d-none d-md-flex">
@@ -355,10 +355,10 @@
       </div>
       <div class="centerSec">
         <div class="BtmSec text-center">
-          <img src="{{asset('frontend/images/logo-header-1.png')}}" class="logo-sec" height="83" width="auto" alt="" />
+          <img src="<?php echo e(asset('frontend/images/logo-header-1.png')); ?>" class="logo-sec" height="83" width="auto" alt="" />
           <h6 class="text-white px-5"> You’re requesting the TRADESPERSON BANG! for</h6>
           <h5 class="text-white"> 15, Smith St, London, W12 2AD.</h5>
-          {{-- <img src="{{asset('frontend/images/img3.png')}}" class="mapimg" height="375" width="auto" alt="" /> --}}
+          
           <div id='address_map_1' class="mx-auto mapimg" style='width: 700px; height: 380px;'></div>
         </div>
       </div>
@@ -412,7 +412,7 @@
             </a>
             <h5 class="d-block d-md-none">Find your address</h5>
             <div class="d-block d-md-none">
-              <img src="{{asset('frontend/images/img6.png')}}" alt="" />
+              <img src="<?php echo e(asset('frontend/images/img6.png')); ?>" alt="" />
             </div>
           </div>
           <ul class="MultiTab justify-content-center mx-auto d-none d-md-flex">
@@ -450,9 +450,9 @@
       </div>
       <div class="centerSec">
         <div class="BtmSec text-center">
-          <img src="{{asset('frontend/images/logo-header-1.png')}}" height="83" width="auto" alt="" />
+          <img src="<?php echo e(asset('frontend/images/logo-header-1.png')); ?>" height="83" width="auto" alt="" />
           <h4 class="text-white mb-5 px-4">Your BANG! is on it’s way </h4>
-          {{-- <img src="{{asset('frontend/images/img3.png')}}" class="mapimg" height="375" width="auto" alt="" /> --}}
+          
           <div id='address_map_2' class="mx-auto mapimg" style='width: 700px; height: 380px;'></div>
           <div class="w-100 pt-0 pt-md-5 mt-3">
             <button class="form-btn2 text-white border-0 finish_steps_button">FINISH</button>
@@ -526,6 +526,7 @@
 
 
 
-@endsection
-@section('script')
-@endsection
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('frontend.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH E:\xampp\htdocs\MVP\resources\views/frontend/pages/home/home.blade.php ENDPATH**/ ?>

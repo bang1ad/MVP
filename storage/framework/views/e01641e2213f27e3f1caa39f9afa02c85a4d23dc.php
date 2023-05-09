@@ -9,7 +9,7 @@
     <meta name="author" content="Jean Danial">
     <meta name="robots" content="follow"/>
     <meta name="google-site-verification" content="t5SSdSmkdkrNy9oNVQIBppzwAbT2vYgPAhv0A_GuQ08"/>
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>" />
 
     <link rel="icon" href="favicon.ico">
 	<title>---BANG----</title>
@@ -23,27 +23,27 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper-scrollbar.min.css" /> -->
     <link href="//db.onlinewebfonts.com/c/46d3877aa4bb5bcb284281e0c9544c18?family=FF+Kievit" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="<?php echo e(asset('frontend/css/bootstrap.min.css')); ?>"/>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
     <link href='//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css' rel='stylesheet' />
-    <link rel="stylesheet" href="{{asset('frontend/scss/style.css')}} " />
-    <link rel="stylesheet" href="{{asset('frontend/css/dev_style.css')}} " />
+    <link rel="stylesheet" href="<?php echo e(asset('frontend/scss/style.css')); ?> " />
+    <link rel="stylesheet" href="<?php echo e(asset('frontend/css/dev_style.css')); ?> " />
  
     
     <script>
-        let base_url = "{{url('/')}}";
+        let base_url = "<?php echo e(url('/')); ?>";
     </script>
 </head>
 
 <body class="">
 	<!-- Header -->
-	{{-- @include('frontend.layouts.header') --}}
+	
     <!-- Header end-->
     <!--Section-->
     <section>
-        @yield('content')
+        <?php echo $__env->yieldContent('content'); ?>
     </section>
-    @include('frontend.layouts.header')
+    <?php echo $__env->make('frontend.layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <!-- section end-->
     
     <!--Footer-->
@@ -52,18 +52,18 @@
     
 	<!-- JavaScript -->
 
-	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
-    <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
+	<script src="<?php echo e(asset('frontend/js/jquery.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('frontend/js/bootstrap.min.js')); ?>"></script>
     
     <script src="https://cc-cdn.com/generic/scripts/v1/cc_c2a.min.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js'></script>    
-    <script src="{{asset('frontend/js/frontend_script.js')}}"></script>
+    <script src="<?php echo e(asset('frontend/js/frontend_script.js')); ?>"></script>
     <!-- <script src="https://unpkg.com/swiper/js/swiper-scrollbar.min.js"></script> -->
     
     <!-- Mobile Navigation End -->
 
-    @yield('script')
+    <?php echo $__env->yieldContent('script'); ?>
    
 </body>
-</html>
+</html><?php /**PATH E:\xampp\htdocs\MVP\resources\views/frontend/layouts/app.blade.php ENDPATH**/ ?>
