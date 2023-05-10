@@ -209,7 +209,8 @@
       <div class="centerSec">
         <div class="BtmSec text-center">
           <img src="{{asset('frontend/images/logo-header-1.png')}}" class="logo-sec" height="83" width="auto" alt="" />
-          <h4 class="text-white mb-0 px-4">You’re about to BANG!</h4>
+          <h4 class="text-white mb-0 px-4">YOU’RE ABOUT TO BANG!</h4>
+          <h6 class="text-white">Get your home’s 2023 <small class="home_bang_type_text">tradesperson</small> BANG! price today and book with local BANG! Experts.</h6>
         </div>
       </div>
       <div class="LastSec bg-primary">
@@ -356,8 +357,8 @@
       <div class="centerSec">
         <div class="BtmSec text-center">
           <img src="{{asset('frontend/images/logo-header-1.png')}}" class="logo-sec" height="83" width="auto" alt="" />
-          <h6 class="text-white px-5"> You’re requesting the TRADESPERSON BANG! for</h6>
-          <h5 class="text-white"> 15, Smith St, London, W12 2AD.</h5>
+          <h6 class="text-white px-5 request_bang_text"> You’re requesting the TRADESPERSON BANG! for</h6>
+          <h5 class="text-white address_request_bang" > 15, Smith St, London, W12 2AD.</h5>
           {{-- <img src="{{asset('frontend/images/img3.png')}}" class="mapimg" height="375" width="auto" alt="" /> --}}
           <div id='address_map_1' class="mx-auto mapimg" style='width: 700px; height: 380px;'></div>
         </div>

@@ -25,12 +25,17 @@ $(document).ready(function() {
           if(bangType == "bikeservice"){
             $(".bang_type_image").attr('src',bikeServiceImg);
           } 
-          
-          
+          userBangObj.bang_type = bangType;
+          let bangTypeText = bangTypeTexUpperCase(bangType);
+          $(".request_bang_text").text(`You’re requesting the ${bangTypeText} BANG! for`);
+          $(".home_bang_type_text").text(bangType);
       });
+
       $("body").on('click','.c2a_results li',function() {
-            $(".search_address_input").val($(this).text());
-            $(".search_address_text").text($(this).text());
+            let address = $(this).text();
+            $(".search_address_input").val(address);
+            $(".search_address_text").text(address);
+            $(".address_request_bang").text(address);
       });
       $("body").on('click','.address_step_tab_button', function(e) {
           e.preventDefault(); 
@@ -55,6 +60,14 @@ $(document).ready(function() {
 
 
     });// end ready
+
+    function bangTypeTexUpperCase(bangType){
+      let bangTypeLabel = 'TRADESPERSON';
+      if(bangType == "bikeservice"){
+        bangTypeLabel = 'BIKESERVICE';
+      }
+      return bangTypeLabel;
+    } 
 
     function finishSteps(obj){
         let bangId = generateUniqueNumber();
@@ -98,6 +111,7 @@ $(document).ready(function() {
      function addressValidate(){
        let status = true;
        let address = $(".search_address_input").val();
+       $(".address_request_bang").text(address);
        userBangObj.bang_type = "";
        userBangObj.address = address;
        if($.trim(address) == ""){
