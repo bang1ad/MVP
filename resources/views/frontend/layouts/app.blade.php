@@ -43,7 +43,7 @@
     <section>
         @yield('content')
     </section>
-    @include('frontend.layouts.header')
+    @include('frontend.layouts.footer')
     <!-- section end-->
     
     <!--Footer-->

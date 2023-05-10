@@ -9,11 +9,15 @@
 <body>
     Hi,
 
-    <p>User Name:     <?php echo e($userData['first_name']); ?>   <?php echo e($userData['last_name']); ?></p>
-    <p>User Email:    <?php echo e($userData['user_email']); ?> </p>
-    <p>Bang id:       <?php echo e($userData['bangId']); ?> </p>
-    <p>Bang Type:     <?php echo e($userData['bang_type']); ?> </p>
-    <p>Address:       <?php echo e($userData['address']); ?> </p>
+    <h2>New bang request </h2>
+    
+    <p>Bang ID:        <?php echo e($userData['bangId']); ?> </p>
+    <p>Type:           <?php echo e($userData['bang_type']); ?> </p>
+    <p>First Name:     <?php echo e($userData['first_name']); ?> </p>
+    <p>Last Name:      <?php echo e($userData['last_name']); ?></p>
+    <p>Address:        <?php echo e($userData['address']); ?> </p>
+    <p>Mobile:         <?php echo e($userData['mobile_number']); ?> </p>
+    <p>Email:          <?php echo e($userData['user_email']); ?> </p>
 
 
     Thanks

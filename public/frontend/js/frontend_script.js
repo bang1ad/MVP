@@ -27,8 +27,8 @@ $(document).ready(function() {
           } 
           userBangObj.bang_type = bangType;
           let bangTypeText = bangTypeTexUpperCase(bangType);
-          $(".request_bang_text").text(`You’re requesting the ${bangTypeText} BANG! for`);
-          $(".home_bang_type_text").text(bangType);
+         // $(".request_bang_text").text(`You’re requesting the ${bangTypeText} BANG! for`);
+           $(".home_bang_type_text").text(bangType);
       });
 
       $("body").on('click','.c2a_results li',function() {
@@ -55,7 +55,7 @@ $(document).ready(function() {
           }
       });
       $("body").on('click','.finish_steps_button', function(e) {
-            // finishSteps($(this));
+            finishSteps($(this));
       });
 
 
@@ -70,14 +70,14 @@ $(document).ready(function() {
     } 
 
     function finishSteps(obj){
+
         let bangId = generateUniqueNumber();
         let postalCode = $(".postal_code").val();
- 
         // bang object
         userBangObj.bangId = bangId;
         userBangObj.postalCode = postalCode;
         console.log(userBangObj);
-        //return false;
+        //  return false;
         $(obj).addClass('disable_class');  
         $.ajax({
            url: base_url+"/bang_request/submit",
@@ -112,7 +112,6 @@ $(document).ready(function() {
        let status = true;
        let address = $(".search_address_input").val();
        $(".address_request_bang").text(address);
-       userBangObj.bang_type = "";
        userBangObj.address = address;
        if($.trim(address) == ""){
            toastr.error('Please enter address!', 'Error!');

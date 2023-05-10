@@ -1,4 +1,3 @@
-
 <?php $__env->startSection('content'); ?>
 
 <section>
@@ -14,7 +13,7 @@
             <a class="navbar-brand p-0" href="#">
               <img src="<?php echo e(asset('frontend/images/logo-header-1.png')); ?>" height="48" width="auto" alt="" />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 16H28" stroke="black" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M4 8H28" stroke="black" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -30,7 +29,7 @@
                   <a class="p-0 nav-link text-white fs-18 lh-21 fw-medium" href="#">Get your Sp_ACE</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </nav>
       </header>
@@ -41,12 +40,12 @@
         <div class="MainArea w-100">
           <div class="container">
             <div class="row">
-              <div class="col-lg-6 p-0">
+              <div class="col-lg-6">
                 <h2>BANG!S HAVE ARRIVED</h2>
                 <p>Need a plumber? Or maybe<br> your bike needs a service. Well, quite simply the first price you should check is your home’s 2023 BANG! price</p>
               </div>
               <div class="col-lg-6 p-0">
-                <img src="<?php echo e(asset('frontend/images/img7.png')); ?>" class="w-100 bnrimg" alt="" />
+                <img src="<?php echo e(asset('frontend/images/img7.png')); ?>" class="w-100 bnrimg ml-2" alt="" />
               </div>
               <div class="col-lg-12 text-center py-5 my-5 customtop">
                 <h2>WHAT’S A BANG!</h2>
@@ -69,15 +68,33 @@
                   <h3>YOUR HOME’S 2023</h3>
                   <h4>TRADESPERSON BANG!</h4>
                 </div>
-                <img src="<?php echo e(asset('frontend/images/img7.png')); ?>" class="w-100 bnrimg" alt="" />
+                <img src="<?php echo e(asset('frontend/images/img7.png')); ?>" class="w-100 bnrimg ml-2" alt="" />
               </div>
-              <div class="col-lg-6 ps-4 ps-md-5">
+              <div class="col-lg-6 ps-6 ps-md-5">
                 <div class="d-none d-md-block">
                   <h3>YOUR HOME’S 2023</h3>
                   <h4>TRADESPERSON BANG!</h4>
                 </div>
                 <h5>Need a tradesperson ?</h5>
-                <p>Use you home’s annual Bike Service<br> BANG! for 2023 and SAVE!</p>
+                <p>Use you home’s annual Tradesperson BANG<br> BANG! for 2023 and SAVE!</p>
+                <div class="accordion banner d-block d-md-none mb-4" id="accordionExample">
+                  <div class="accordion-item bg-transparent">
+                    <h3 class="accordion-header text-white" id="headingOne1">
+                      <button class="accordion-button text-uppercase text-white bg-transparent p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                      </button>
+                    </h3>
+                    <div id="collapseOne1" class="accordion-collapse collapse" aria-labelledby="headingOne1" data-bs-parent="#accordionExample">
+                      <div class="accordion-body text-white p-0">
+                        <ul>
+                          <li>Your home gets 1 Tradesperson BANG! a year</li>
+                          <li>Jobs completed by local experts</li>
+                          <li>SAVE MONEY!</li>
+                          <li>Transparent prices</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <ul class="d-none d-md-block">
                   <li>Your home gets 1 Tradesperson BANG! a year</li>
                   <li>Jobs completed by local experts</li>
@@ -94,13 +111,31 @@
         <div class="stepcol stepcol2">
           <div class="container">
             <div class="row">
-              <div class="col-lg-6 ps-5">
+              <div class="col-lg-6 ps-6 ps-md-5">
                 <div class="d-none d-md-block">
                   <h3>YOUR HOME’S 2023</h3>
                   <h4>Bike Service BANG! </h4>
                 </div>
                 <h5>Need a bike service ?</h5>
                 <p>Use you home’s annual Bike Service <br>BANG! for 2023 and SAVE!</p>
+                <div class="accordion banner1 d-block d-md-none mb-4" id="accordionExample">
+                  <div class="accordion-item bg-transparent">
+                    <h3 class="accordion-header text-white" id="headingOne2">
+                      <button class="accordion-button text-uppercase text-white bg-transparent p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                      </button>
+                    </h3>
+                    <div id="collapseOne2" class="accordion-collapse collapse" aria-labelledby="headingOne2" data-bs-parent="#accordionExample">
+                      <div class="accordion-body  p-0">
+                        <ul>
+                          <li>Your home gets 1 Tradesperson BANG! a year</li>
+                          <li>Jobs completed by local experts</li>
+                          <li>SAVE MONEY!</li>
+                          <li>Transparent prices</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <ul class="d-none d-md-block">
                   <li>Your home gets 1 Tradesperson BANG! a year</li>
                   <li>Jobs completed by local experts</li>
@@ -116,7 +151,7 @@
                   <h3>YOUR HOME’S 2023</h3>
                   <h4>Bike Service<br class="d-block"> BANG! </h4>
                 </div>
-                <img src="<?php echo e(asset('frontend/images/img8.png')); ?>" class="w-100 bnrimg" alt="" />
+                <img src="<?php echo e(asset('frontend/images/img8.png')); ?>" class="w-100 bnrimg ml-2" alt="" />
               </div>
             </div>
           </div>
@@ -158,8 +193,7 @@
         </div>
       </section>
     </div>
-
-    <div class="tab-pane fade show" id="na-home" role="tabpanel" aria-labelledby="na-home-tab">
+    <div class="tab-pane fade" id="na-home" role="tabpanel" aria-labelledby="na-home-tab">
       <div class="TopSec">
         <div class="container">
           <div class="backlink w-100 d-flex justify-content-between align-items-center px-3 px-md-0">
@@ -224,18 +258,18 @@
               </div>
             </div>
             <div class="col-lg-12 d-block d-md-none">
-              <div class="Faqs Faqs1 text-center">
+              <div class="Faqs Faqs1 text-center px-4">
                   <h2 class="text-white">FAQS</h2>
                   <div class="accordion text-start mx-auto" id="accordionExample">
                     <div class="accordion-item bg-transparent">
                       <h3 class="accordion-header text-white" id="headingOne">
                         <button class="accordion-button text-uppercase text-white bg-transparent p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          What’s a Tradesperson BANG! ?
+                          What's a Tradesperson BANG! ?
                         </button>
                       </h3>
                       <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body text-white p-0">
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                          <p>A BANG! is an an exclusive price for a local plumber, heating engineer or electrician. Don’t worry other trades are coming soon.</p>
                         </div>
                       </div>
                     </div>
@@ -247,7 +281,7 @@
                       </h3>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body text-white p-0">
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                          <p>Each year we allocate your home with 1 tradesperson BANG! which can be used by you and the people you live with.</p>
                         </div>
                       </div>
                     </div>
@@ -259,7 +293,7 @@
                       </h3>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="accordion-body text-white p-0">
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                          <p>We only partner with local experts so not only do you get a great price you can be assured that the work is carried out by approved and reliable tradespeople.</p>
                         </div>
                       </div>
                     </div>
@@ -271,7 +305,7 @@
                       </h3>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                         <div class="accordion-body text-white p-0">
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                          <p>Of course! Just add the BANG! onto your order so it's ready to use the next time you need an expert</p>
                         </div>
                       </div>
                     </div>
@@ -316,7 +350,7 @@
                 <path d="M16.25 28.5L3.75 16L16.25 3.5" stroke="white" stroke-width="6.66667" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>            
             </a>
-            <h5 class="d-block d-md-none">Find your address</h5>
+            <h5 class="d-block d-md-none">Your details</h5>
             <div class="d-block d-md-none">
               <img src="<?php echo e(asset('frontend/images/img5.png')); ?>" alt="" />
             </div>
@@ -357,8 +391,15 @@
       <div class="centerSec">
         <div class="BtmSec text-center">
           <img src="<?php echo e(asset('frontend/images/logo-header-1.png')); ?>" class="logo-sec" height="83" width="auto" alt="" />
-          <h6 class="text-white px-5 request_bang_text"> You’re requesting the TRADESPERSON BANG! for</h6>
-          <h5 class="text-white address_request_bang" > 15, Smith St, London, W12 2AD.</h5>
+          <h6 class="text-white px-5 request_bang_text">
+                Your home’s Tradesperson BANG! 
+                will be on its way to your inbox
+                inside 24 hours
+                We just need to check your haven’t 
+                used your home’s BANG! this year
+                and that you live in an active postcode area.
+          </h6>
+          
           
           <div id='address_map_1' class="mx-auto mapimg" style='width: 700px; height: 380px;'></div>
         </div>
@@ -411,7 +452,7 @@
                 <path d="M16.25 28.5L3.75 16L16.25 3.5" stroke="white" stroke-width="6.66667" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>            
             </a>
-            <h5 class="d-block d-md-none">Find your address</h5>
+            <h5 class="d-block d-md-none">Confirmation</h5>
             <div class="d-block d-md-none">
               <img src="<?php echo e(asset('frontend/images/img6.png')); ?>" alt="" />
             </div>
@@ -474,7 +515,7 @@
           </h3>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body text-white p-0">
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p>A BANG! is an an exclusive price for a local plumber, heating engineer or electrician. Don’t worry other trades are coming soon.</p>
             </div>
           </div>
         </div>
@@ -486,7 +527,7 @@
           </h3>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body text-white p-0">
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p>Each year we allocate your home with 1 tradesperson BANG! which can be used by you and the people you live with.</p>
             </div>
           </div>
         </div>
@@ -498,7 +539,7 @@
           </h3>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
             <div class="accordion-body text-white p-0">
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p>We only partner with local experts so not only do you get a great price you can be assured that the work is carried out by approved and reliable tradespeople.</p>
             </div>
           </div>
         </div>
@@ -510,7 +551,7 @@
           </h3>
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
             <div class="accordion-body text-white p-0">
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p>Of course! Just add the BANG! onto your order so it’s ready to use the next time you need an expert</p>
             </div>
           </div>
         </div>

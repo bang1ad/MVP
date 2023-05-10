@@ -9,11 +9,15 @@
 <body>
     Hi,
 
-    <p>User Name:     {{$userData['first_name']}}   {{$userData['last_name']}}</p>
-    <p>User Email:    {{$userData['user_email']}} </p>
-    <p>Bang id:       {{$userData['bangId']}} </p>
-    <p>Bang Type:     {{$userData['bang_type']}} </p>
-    <p>Address:       {{$userData['address']}} </p>
+    <h2>New bang request </h2>
+    
+    <p>Bang ID:        {{$userData['bangId']}} </p>
+    <p>Type:           {{$userData['bang_type']}} </p>
+    <p>First Name:     {{$userData['first_name']}} </p>
+    <p>Last Name:      {{$userData['last_name']}}</p>
+    <p>Address:        {{$userData['address']}} </p>
+    <p>Mobile:         {{$userData['mobile_number']}} </p>
+    <p>Email:          {{$userData['user_email']}} </p>
 
 
     Thanks
