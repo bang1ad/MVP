@@ -16,7 +16,7 @@ class HomeController extends Controller
         
         $userData = $request->all();
         Mail::to('spacey@little-spaces.com')->send(new BangRequestEmail($userData));
-        /* $bang = new Bang();
+        $bang = new Bang();
         $bang->name = "";
         $bang->type = $request->bang_type;
         $bang->bang_id = $request->bangId;
@@ -28,8 +28,9 @@ class HomeController extends Controller
         $user->postal_code = $request->postal_code;
         $user->password = "";
         $user->address = $request->address;
-        $user->save(); */
 
+        //dd($userData);
+        $user->save();
         return [
             'status'=> true,
             'data'=> $request->all()
