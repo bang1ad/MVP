@@ -10,8 +10,8 @@ $.ajaxSetup({
 
 $(document).ready(function() {
 
-      initFetchify();
-
+     // initFetchify();
+       searchMapbox('address_map_1','');
       function hideFirstStep(){
         $("#nav-home").removeClass('active');
         $("#nav-home").removeClass('show');
@@ -66,6 +66,7 @@ $(document).ready(function() {
            $(".tradeperson_bike_step_acc_2").html(`Each year we allocate your home with 1 tradesperson BANG! which can be used by you and the people you live with.`); 
            $(".tradeperson_bike_step_acc_3").html(`We only partner with local experts so not only do you get a great price you can be assured that the work is carried out by approved and reliable tradespeople.`); 
            $(".banner_step_3_text").text(`Your home's Tradesperson BANG! will arrive inside 24 hours!`);
+           $(".home_bang_type_text_3").text('TRADESPERSON');
            if(bangType === "bikeservice"){
                $(".main_inner_section").addClass('selected_bike_card_active');
                $(".sel_card_heading").html(`Bike need a service? <br/> We’ve got you.`);
@@ -74,7 +75,9 @@ $(document).ready(function() {
                $(".tradeperson_bike_step_acc_2").html(`Each year we allocate your home with 1 bike service BANG! which can be used by you and the people you live with.`); 
                $(".tradeperson_bike_step_acc_3").html(`We partner up with expert local bike technicians to ensure you’re not just getting a fantastic price but you’re also getting a premium level bike service at the same time. After all, that’s what BANG! is all about.`); 
                $(".banner_step_3_text").text(`Your home's Bike service BANG! will arrive inside 24 hours!`);
-          }
+          
+               $(".home_bang_type_text_3").text('BIKE SERVICE');
+            }
            let bangText = bangTypeTexUpperCase(bangType);
            $(".home_bang_type_text_capital").text(bangText);
 
@@ -106,11 +109,13 @@ $(document).ready(function() {
       });
       $("body").on('click','.address_step_tab_button', function(e) {
           e.preventDefault(); 
-          console.log('latLong', latLong);
+         
           let isAddrValidate = addressValidate();
           if(isAddrValidate){
+            let latLong = JSON.parse($("#latlang").val());
             showUserProfileStep();
             showMapAddress('address_map_1',latLong);
+            searchMapbox('address_map_1',latLong);
             stepNumber  = 2;
           }
       });
@@ -118,9 +123,12 @@ $(document).ready(function() {
       $("body").on('click','.user_profile_step_button', function(e) {
           e.preventDefault(); 
           let isUserDetaiValidate = userDetailValidate();
+          
           if(isUserDetaiValidate){
             showMapOnUserDetailStep();
-            showMapAddress('address_map_2', latLong);
+           // showMapAddress('address_map_2', latLong);
+            let latLong = JSON.parse($("#latlang").val());
+            searchMapbox('address_map_2',latLong);
             stepNumber = 3;
           }
       });
@@ -179,12 +187,11 @@ $(document).ready(function() {
  
      function addressValidate(){
        let status = true;
-       let address = $(".search_address_input").val();
+       let address = $(".search_address_text").text();
        $(".address_request_bang").text(address);
        let bangType = $(".bang_type").val();
        let bangText = bangTypeTexUpperCase(bangType);
       $(".home_bang_type_text_capital").text(bangText);
-      
        userBangObj.address = address;
        if($.trim(address) == ""){
            toastr.error('Please enter address!', 'Error!');
@@ -269,6 +276,7 @@ function getLatLongByAddress(postalCode, callback){
         .then(response => response.json())
         .then(data => {
           // Handle the API response data here
+          console.log('data.features', data.features);
           if(data.features.length > 0){
             let corrdinates = data.features[0].center;
             callback(corrdinates)
@@ -287,15 +295,53 @@ function getLatLongByAddress(postalCode, callback){
 
 function showMapAddress(containerId, latLong){
   
-    mapboxgl.accessToken = accessToken;
+    // mapboxgl.accessToken = accessToken;
+    // const map = new mapboxgl.Map({
+    //     container: containerId, // container ID
+    //     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+    //     style: 'mapbox://styles/mapbox/streets-v12', // style URL
+    //     center: latLong, // starting position [lng, lat]
+    //     zoom: 15// starting zoom
+    // });
+    // var marker = new mapboxgl.Marker( {
+    //     /* anchor: 'bottom' */
+    //   }).setLngLat(latLong).addTo(map);
+}
+
+
+
+function searchMapbox(container_dev,latLong){
+ 
+   let latitudeLongitude = latLong;
+   console.log('latLong', latLong);
+  if(latLong == ""){
+    latitudeLongitude =  [-79.4512, 43.6568];
+  }
+  mapboxgl.accessToken = accessToken;
     const map = new mapboxgl.Map({
-        container: containerId, // container ID
+        container: container_dev,
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-        style: 'mapbox://styles/mapbox/streets-v12', // style URL
-        center: latLong, // starting position [lng, lat]
-        zoom: 15// starting zoom
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: latitudeLongitude,
+        //center: [-79.4512, 43.6568],
+        zoom: 15
     });
     var marker = new mapboxgl.Marker( {
         /* anchor: 'bottom' */
-      }).setLngLat(latLong).addTo(map);
+      }).setLngLat(latitudeLongitude).addTo(map);
+    // Add the control to the map.
+    const geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl
+    });
+    geocoder.on('result', (event) => {
+      console.log('bbb ', event);
+      let placeName =  event.result.place_name;
+      let latLong = event.result.geometry.coordinates;
+      $("#latlang").val(JSON.stringify(latLong));
+      $(".search_address_text").text(placeName);
+      //map.getSource('single-point').setData(event.result.geometry);
+      });
+    document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+
 }
